@@ -1,4 +1,4 @@
 export const path = {
-    sendverificationcode: "/sendverificationcode",
-    verifyuser: "/verifyuser"
+    auth: "/auth",
+    booking: "/booking"
 }

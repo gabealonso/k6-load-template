@@ -4,19 +4,16 @@ import { checkStatus } from "../common/utils.js";
 import { randomIntBetween } from "https://jslib.k6.io/k6-utils/1.1.0/index.js";
 import { path } from "../config/path.js";
 
-export function sendVerificationCode() {
-  group("Send Verification Code", function () {
+export function auth() {
+  group("POST - Authentication", function () {
     let payload = {
-      number_to: "555555555"
+      username: "admin",
+      password: `${process.env.PWD}`
     };
 
-    let response = http.post(`${process.env.BASE_URL}${path.sendverificationcode}`, JSON.stringify(payload), { 
+    let response = http.post(`${process.env.HOST}${path.auth}`, JSON.stringify(payload), { 
       headers: {
-          "Content-Type": "application/json",
-          "User-Agent": "iOS",
-          "X-API-Version": "2.0",
-          "X-Timestamp": "1597938715.938225",
-          "X-Token": `${process.env.TOKEN}`
+          "Content-Type": "application/json"
       },
   });
 

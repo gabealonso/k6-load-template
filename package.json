@@ -1,14 +1,14 @@
 {
-  "name": "k6-demo",
+  "name": "k6-load-template",
   "version": "1.0.0",
-  "description": "Project to review k6  basic concepts.",
+  "description": "Project to set a k6 template.",
   "main": "index.js",
   "scripts": {
     "test": "simple-run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/n/a.git"
+    "url": "git+https://github.com/gabealonso/k6-load-template"
   },
   "keywords": [
     "k6",
@@ -17,12 +17,12 @@
     "spike",
     "stress"
   ],
-  "author": "Joan Esquivel",
-  "license": "ISC",
+  "author": "",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/n/a/issues"
+    "url": "https://github.com/gabealonso/k6-load-template/issues"
   },
-  "homepage": "https://github.com/n/a#readme",
+  "homepage": "https://github.com/gabealonso/k6-load-template/blob/main/README.md",
   "dependencies": {
     "dot-env": "^0.0.1"
   }
