@@ -1,0 +1,43 @@
+{
+    "scenarios": {
+        "initial_ramp": {
+            "executor": "ramping-arrival-rate",
+            "startRate": 1,
+            "timeUnit": "1s",
+            "preAllocatedVus": 200,
+            "maxVus": 300,
+            "stages": [
+                {
+                    "target": 24,
+                    "duration": "30s"
+                }
+            ],
+            "exec": "sendAndVerify"
+        },
+        "constant_req_rate": {
+            "executor": "constant-arrival-rate",
+            "rate": 24,
+            "timeUnit": "1s",
+            "duration": "1m",
+            "preAllocatedVus": 200,
+            "maxVus": 300,
+            "startTime": "30s",
+            "exec": "sendAndVerify"
+        },
+        "final_ramp":{
+            "startTime":"90s",
+            "executor": "ramping-arrival-rate",
+            "startRate": 24,
+            "timeUnit": "1s",
+            "preAllocatedVus": 200,
+            "maxVus": 300,
+            "stages": [
+                {
+                    "target": 0,
+                    "duration": "30s"
+                }
+            ],
+            "exec": "sendAndVerify"
+        }
+    }
+}
