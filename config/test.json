@@ -12,7 +12,7 @@
                     "duration": "30s"
                 }
             ],
-            "exec": "authAndBooking"
+            "exec": "scenario1"
         },
         "constant_req_rate": {
             "executor": "constant-arrival-rate",
@@ -22,7 +22,7 @@
             "preAllocatedVus": 200,
             "maxVus": 300,
             "startTime": "30s",
-            "exec": "authAndBooking"
+            "exec": "scenario1"
         },
         "final_ramp":{
             "startTime":"90s",
@@ -37,7 +37,7 @@
                     "duration": "30s"
                 }
             ],
-            "exec": "authAndBooking"
+            "exec": "scenario1"
         }
     }
 }

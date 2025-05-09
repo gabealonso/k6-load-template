@@ -1,4 +1,4 @@
 export const path = {
     auth: "/auth",
-    booking: "/booking"
+    bookings: "/bookings"
 }
